@@ -1,6 +1,10 @@
+import {Input} from "../../Components/Globals/Input/Input"
+import {useState} from "React"
 
 
 export const PhotoGet = () => {
+    const [getPhoto, setGetPhoto] = useState('')
+    
 
 
     function handleSubmit(event) {
@@ -20,7 +24,13 @@ export const PhotoGet = () => {
 
 
 return <form onSubmit={handleSubmit} action="">
-<input type="text" />
+<Input 
+type="text"
+id="photoGet"
+value={getPhoto}
+onChange={setGetPhoto}
+
+   />
 
 <button>Enviar</button>
 

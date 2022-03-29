@@ -1,0 +1,78 @@
+.wrapperForm {
+    grid-column: 2/3;
+    padding: 16px;
+    margin-top: 20vh;
+    max-width: 30rem;
+}
+
+
+.loginTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 16px 0;
+    position: relative;
+}
+
+.loginTitle:before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    display: block;
+    background: #FFBB11;
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    z-index: -1;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+}
+
+
+.lostPassword {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    width: fit-content;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 16px;
+    transition: .3s;
+}
+
+.lostPassword:hover {
+    color: #444;
+}
+
+.registerTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #333333;
+    margin-top: 4rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.registerTitle:before {
+content: "";
+display: block;
+width: 50px;
+height: 10px;
+border-radius: 4px;
+background-color: #ddd;
+position: absolute;
+bottom: -10px;
+left: 0px;
+}
+
+.registerText {
+    font-size: 1rem;
+    color: #333333;
+    margin:  2.5rem 0;
+}

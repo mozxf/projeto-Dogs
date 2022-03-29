@@ -12,7 +12,7 @@
 .loginSection:before {
     content: "";
     position: relative;
-    background: url('src/Assets/login.jpg') no-repeat 50%;
+    background: url('/src/Assets/login.jpg') no-repeat 50%;
     display: inline-block;
     background-size: cover;
     grid-column: 1/2;
@@ -29,48 +29,6 @@
 }
 
 
-.wrapperForm h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 600;
-    font-size: 3rem;
-    margin: 16px 0;
-    position: relative;
-}
-
-.wrapperForm h1:before {
-    content: "";
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 4px;
-    display: block;
-    background: #FFBB11;
-    position: absolute;
-    bottom: 5px;
-    left: -5px;
-    z-index: -1;
-}
-
-.loginForm {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  
-}
-
-.formButton {
-    border: none;
-    color: #764701;
-    background: #FFBB11;
-    border-radius: .5rem;
-    padding: 12px 38px;
-    width: fit-content;
-    place-self: left;
-    margin-bottom: 16px;
-    cursor: pointer;
-    border: 3.5px solid #fff;
-    outline: 1px solid #fff;
-    transition: .2s;
-}
 
 
 
@@ -78,64 +36,14 @@
 
 
 
-.lostPassword {
-    font-family: Arial, Helvetica, sans-serif;
-    display: block;
-    width: fit-content;
-    color: #666666;
-    font-size: 1rem;
-    font-weight: 500;
-    padding-top: 16px;
-    transition: .3s;
-}
-
-.lostPassword:hover {
-    color: #444;
-}
-
-.registerTitle {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2rem;
-    color: #333333;
-    margin-top: 4rem;
-    font-weight: 600;
-    position: relative;
-}
-
-.registerTitle:before {
-content: "";
-display: block;
-width: 50px;
-height: 10px;
-border-radius: 4px;
-background-color: #ddd;
-position: absolute;
-bottom: -10px;
-left: 0px;
-}
-
-.registerText {
-    font-size: 1rem;
-    color: #333333;
-    margin:  2.5rem 0;
-}
 
 
 
-.registerButton {
-    text-decoration: none;
-    color: #764701;
-    background: #FFBB11;
-    border-radius: 6px;
-    padding: .75rem 1.5rem;
-    cursor: pointer;
-    border: 3.5px solid #fff;
-    outline: 1px solid #fff;
-    transition: .2s;
 
-}
 
-.formButton:hover, .registerButton:hover {
-    border-color: rgb(255, 247, 173);
-    outline-color: #FFBB11;
-}
+
+
+
+
+
+

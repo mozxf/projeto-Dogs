@@ -1,6 +1,8 @@
 import {useState} from "react"
+import { Input } from "../../Components/Globals/Input/Input";
+import { Button } from "../../Components/Globals/Button/Button";
 
-export const TokenPost = () => {
+export const TokenPost = ({className}) => {
 const [username, setUsername] = useState("") 
 const [password, setPassword] = useState("") 
 
@@ -33,23 +35,28 @@ return response.json()
 }
 
 
-return <form onSubmit={handleSubmit}>
-
-    <input type="text" 
-    value={username} 
-    onChange={({target}) => setUsername(target.value)}
-    placeholder="username" 
-    />
+return <form className={className} onSubmit={handleSubmit}>
 
     
 
-    <input type="password" 
-    value={password} 
-    onChange={({target}) => setPassword(target.value)}
-    placeholder="password" 
-    />
+    <Input 
+    id={'user'}
+    label='Username'
+    value={username}
+    onChange={({target}) => setUsername(target.value)}
+    placeholder='Username'
+    type='text'  />
 
-    <button>Enviar</button>
+    <Input 
+    id='password'
+    label='Password'
+    value={password}
+    onChange={({target}) => setPassword(target.value)}
+    placeholder='Password'
+    type='password'  />
+
+
+    <Button type='button'>Enviar</Button>
 
      </form>
 

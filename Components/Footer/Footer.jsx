@@ -4,7 +4,7 @@ export const Footer = () => {
 
 return (
     <footer className={styles.footer}>
-        <img  src="src\Assets\dogs.svg" alt="" />
+        <img  src="/src/Assets/dogs.svg" alt="" />
         <p>Dogs. Some rights reserved.</p>
 
 

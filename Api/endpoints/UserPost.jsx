@@ -1,6 +1,8 @@
 import {useState} from "react"
+import { Input } from "../../Components/Globals/Input/Input";
+import { Button } from "../../Components/Globals/Button/Button";
 
-export const UserPost = () => {
+export const UserPost = ({className}) => {
 const [username, setUsername] = useState("") 
 const [email, setEmail] = useState("") 
 const [password, setPassword] = useState("") 
@@ -34,27 +36,34 @@ return response.json()
 }
 
 
-return <form onSubmit={handleSubmit}>
+return <form className={className} onSubmit={handleSubmit}>
 
-    <input type="text" 
+    <Input 
+    type="text" 
     value={username} 
     onChange={({target}) => setUsername(target.value)}
-    placeholder="username" 
+    placeholder="Dog"
+    label='Username' 
     />
 
-    <input type="email" 
+    <Input 
+    type="email" 
     value={email} 
     onChange={({target}) => setEmail(target.value)}
-    placeholder="email" 
+    placeholder="dog@email.com"
+    label='Email' 
     />
 
-    <input type="password" 
+    <Input 
+    type="password" 
     value={password} 
     onChange={({target}) => setPassword(target.value)}
-    placeholder="password" 
+    placeholder="dog123*"
+    label='Password'
+    id='password' 
     />
 
-    <button>Enviar</button>
+    <Button type='button'>Register</Button>
 
      </form>
 

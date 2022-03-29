@@ -1,0 +1,29 @@
+
+
+.loginTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 16px 0;
+    position: relative;
+}
+
+.loginTitle:before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    display: block;
+    background: #FFBB11;
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    z-index: -1;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+}
