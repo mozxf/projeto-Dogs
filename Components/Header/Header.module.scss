@@ -1,0 +1,32 @@
+$cor-primaria: #333;
+
+.header {
+    position: fixed;
+    display: block;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.link {
+color: $cor-primaria;
+display: flex;
+gap: 10px;
+text-decoration: none;
+
+}
+
+.link:last-child::after {
+content: "";
+background: url('src\Assets\usuario.svg');
+
+}
