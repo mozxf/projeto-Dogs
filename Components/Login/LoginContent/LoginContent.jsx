@@ -16,7 +16,7 @@ return  <>
     <h2 className={styles.registerTitle}>Register</h2>
     <p className={styles.registerText}>Don't have an account yet? Sign up!
     </p>
-    <Button type='link' href="/login/create">Register</Button>
+    <Button type='link' href="/login/create">Sign-up</Button>
 </div>
 
 </>
