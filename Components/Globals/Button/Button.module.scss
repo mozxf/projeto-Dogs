@@ -1,20 +1,22 @@
-
-
 .button {
-    text-decoration: none;
-    color: #764701;
-    background: #FFBB11;
-    border-radius: 6px;
-    padding: .75rem 1.5rem;
-    cursor: pointer;
-    border: 3.5px solid #fff;
-    outline: 1px solid #fff;
-    transition: .2s;
-    width: fit-content;
+  text-decoration: none;
+  color: #764701;
+  background: #ffbb11;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border: 3.5px solid #fff;
+  outline: 1px solid #fff;
+  transition: 0.2s;
+  width: fit-content;
 }
 
 .button:hover {
-    border-color: rgb(255, 247, 173);
-    outline-color: #FFBB11;
+  border-color: rgb(255, 247, 173);
+  outline-color: #ffbb11;
+}
 
+.button[disabled] {
+  cursor: initial;
+  opacity: 0.5;
 }

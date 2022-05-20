@@ -1,34 +1,38 @@
-
-
 .inputWrapper {
-    position: relative;
+  position: relative;
 }
 
 .input {
-    padding: 12px;
-    height: 3rem;
-    border: none;
-    margin-top: 8px;
-    border-radius: 8px;
-    background: #eee;
-    width: 100%;
-    border: 1px solid #fff;
-    outline: 3.5px solid #fff;
-    transition: .2s;
-    position: relative;
-
+  padding: 12px;
+  height: 3rem;
+  border: none;
+  margin-top: 8px;
+  border-radius: 8px;
+  background: #eee;
+  width: 100%;
+  border: 1px solid #fff;
+  outline: 3.5px solid #fff;
+  transition: 0.2s;
+  position: relative;
 }
 
-.input:hover, input:focus {
-    border-color: #FFBB11;
-    outline-color: #ffe49f;
-    background-color: #fff;
-    }
+.input:hover,
+input:focus {
+  border-color: #ffbb11;
+  outline-color: #ffe49f;
+  background-color: #fff;
+}
 
-    .showPassword {
-        width: 20px;
-        cursor: pointer;
-        position: absolute;
-        right: 25px; 
-        bottom: 12px;
-    }
+.showPassword {
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+  bottom: 12px;
+}
+
+.errorMessage {
+  color: #f31;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

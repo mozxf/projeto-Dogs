@@ -1,14 +1,12 @@
-import {UserPost} from "../../Api/endpoints/UserPost";
-import { Button } from "../Globals/Button/Button";
-import styles from "./Create.module.scss"
+import styles from './Create.module.scss';
+import { CreateUserForm } from './CreateUserForm';
 
 export const Create = () => {
+  return (
+    <>
+      <h1 className={styles.loginTitle}>Register</h1>
 
-    return  (<>
-    <h1 className={styles.loginTitle}>Register</h1>
-
-        <UserPost className={styles.loginForm} />
-      
-
-</> ) 
-}
+      <CreateUserForm className={styles.loginForm} />
+    </>
+  );
+};

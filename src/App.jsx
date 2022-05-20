@@ -1,27 +1,30 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom"
-import { Header } from "../Components/Header/Header"
-import { Footer } from "../Components/Footer/Footer"
-import { Home } from "../Components/Home/Home"
-import { Login } from "../Components/Login/Login"
-
-import "./App.css"
-import styles from "./App.module.scss"
-
-
+import { useContext } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Account } from '../Components/Account/Account';
+import { Footer } from '../Components/Footer/Footer';
+import { Header } from '../Components/Header/Header';
+import { Home } from '../Components/Home/Home';
+import { Login } from '../Components/Login/Login';
+import './App.css';
+import { UserContext, UserStorage } from './UserContext';
 function App() {
+  const userContext = useContext(UserContext);
 
   return (
- <BrowserRouter>
- <Header />
+    <BrowserRouter>
+      <UserStorage>
+        <Header />
 
-<Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/login/*" element={<Login />} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login/*' element={<Login />} />
+          <Route path='/account' element={<Account />} />
+        </Routes>
 
-</Routes>
- 
- <Footer />
- </BrowserRouter>)
+        <Footer />
+      </UserStorage>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

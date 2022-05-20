@@ -1,37 +1,46 @@
-import styles from "./Input.module.scss";
-import {useState} from 'react'
+import { useState } from 'react';
+import styles from './Input.module.scss';
 
-export const Input = ({label, type, id, value, onChange, placeholder}) => {
-    const [view, setView] = useState(false)
-    const [show, setShow] = useState(type)
+export const Input = ({
+  label,
+  type,
+  id,
+  value,
+  onChange,
+  onBlur,
+  placeholder,
+  error,
+  ...props
+}) => {
+  const [showPassword, setShowPassword] = useState(false);
 
-function handleClick() {
-    setView((view) => !view)
-    
-    if(!view) {
-        setShow('text')
-    }
-    else {
-        setShow(type)
-    }
-
-
-}
-
-
-
-
-
-
-return (<div className={styles.inputWrapper}>
-
-<label htmlFor={id} >{label}</label>
-<input className={styles.input} value ={value} onChange={onChange} type={show} id={id} placeholder={placeholder}  />
-{id === 'password' && <img className={styles.showPassword} 
-src={view ? '/src/Assets/eyeOpened.png' : '/src/Assets/eyeClosed.png'}
-onClick ={handleClick}
-/>}
-</div>)
-
-
-}
+  return (
+    <div className={styles.inputWrapper}>
+      <label htmlFor={id}>{label}</label>
+      <div>
+        <input
+          className={styles.input}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          type={showPassword ? 'text' : type}
+          id={id}
+          placeholder={placeholder}
+          {...props}
+        />
+        {id === 'password' && (
+          <img
+            className={styles.showPassword}
+            src={
+              showPassword
+                ? '/src/Assets/eyeOpened.png'
+                : '/src/Assets/eyeClosed.png'
+            }
+            onClick={() => setShowPassword(!showPassword)}
+          />
+        )}
+      </div>
+      {error && <span className={styles.errorMessage}>{error}</span>}
+    </div>
+  );
+};
