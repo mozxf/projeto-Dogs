@@ -6,11 +6,9 @@ import { Footer } from '../Components/Footer/Footer';
 import { Header } from '../Components/Header/Header';
 import { Home } from '../Components/Home/Home';
 import { Login } from '../Components/Login/Login';
-import { UserContext, UserStorage } from './Utilities/UserContext';
+import { UserStorage } from './Utilities/UserContext';
 import { ProtectedRoute } from './Utilities/ProtectedRoute';
 function App() {
-  const userContext = useContext(UserContext);
-
   return (
     <BrowserRouter>
       <UserStorage>

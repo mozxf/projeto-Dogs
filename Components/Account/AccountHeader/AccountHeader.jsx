@@ -4,6 +4,9 @@ import { AccountNav } from './AccountNav/AccountNav';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+const teste = window.matchMedia('40rem');
+console.log(teste);
+
 export const AccountHeader = () => {
   const location = useLocation();
   const [title, setTitle] = useState('');
