@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { tokenPost } from '../Api/endpoints/tokenPost';
-import { validateToken } from '../Api/endpoints/tokenValidate';
-import { userGet } from '../Api/endpoints/userGet';
+import { tokenPost } from '../../Api/endpoints/tokenPost';
+import { validateToken } from '../../Api/endpoints/tokenValidate';
+import { userGet } from '../../Api/endpoints/userGet';
 
 const UserContext = createContext();
 

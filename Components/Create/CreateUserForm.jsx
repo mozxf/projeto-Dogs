@@ -1,4 +1,5 @@
 import { userPost } from '../../Api/endpoints/userPost';
+import { useFetch } from '../../src/Hooks/useFetch';
 import { useForm } from '../../src/Hooks/useForm';
 import { Button } from '../Globals/Button/Button';
 import { Input } from '../Globals/Input/Input';
@@ -8,18 +9,19 @@ export const CreateUserForm = ({ className }) => {
   const email = useForm('email');
   const password = useForm('password');
 
+  const { loading, request } = useFetch();
+
   const { url, options } = userPost(
     username.value,
     email.value,
     password.value
   );
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    const response = awaitfetch(url, options);
-
-    console.log(response);
+    const { response, json } = await request(url, options);
+    console.log(response, json);
   }
 
   return (
@@ -36,12 +38,23 @@ export const CreateUserForm = ({ className }) => {
       <Input
         {...password}
         type='password'
-        placeholder='dog123*'
+        placeholder='dog123'
         label='Password'
         id='password'
       />
 
-      <Button type='button'>Register</Button>
+      {loading ? (
+        <Button disabled type='button'>
+          Loading...
+        </Button>
+      ) : (
+        <Button
+          disabled={!username.value || !email.value || !password.value}
+          type='button'
+        >
+          Register
+        </Button>
+      )}
     </form>
   );
 };

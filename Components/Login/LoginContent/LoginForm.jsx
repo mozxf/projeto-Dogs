@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useForm } from '../../../src/Hooks/useForm';
-import { UserContext } from '../../../src/UserContext';
+import { UserContext } from '../../../src/Utilities/UserContext';
 import { Button } from '../../Globals/Button/Button';
 import { Input } from '../../Globals/Input/Input';
 

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "svg": "svgr --replace-attr-values '#333-currentColor' --ext jsx-d src/compSvg src/assets"
   },
   "dependencies": {
     "history": "^5.3.0",
@@ -13,9 +14,12 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
+    "rollup": "^2.75.3",
     "sass": "^1.49.9"
   },
   "devDependencies": {
+    "@svgr/cli": "^6.2.1",
+    "@svgr/rollup": "^6.2.1",
     "@vitejs/plugin-react": "^1.0.7",
     "vite": "^2.8.0"
   }

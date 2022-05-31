@@ -20,7 +20,7 @@ export const Home = () => {
 
   if (data)
     return (
-      <ul className={styles.photosList}>
+      <ul className={`container +  ${styles.photosList}`}>
         {data.map((item) => {
           return (
             <li className={styles.photosWrapper} key={item.id}>
