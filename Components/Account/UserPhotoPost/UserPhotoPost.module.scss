@@ -1,8 +1,21 @@
+.photoPostSection {
+  display: flex;
+  justify-content: space-between;
+}
+
 .form {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.imagePreview {
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center center;
 }
 
 .button {
